@@ -1,19 +1,21 @@
-const express = require("express")
+const express = require("express") 
 const mongoose = require("mongoose")
 const cors =  require("cors")
 const  userModel = require('./schema/user')
 
 const app = express ()
-app.use(express.json())
+// data from frontend to backend in json
+app.use(express.json()) 
 app.use(cors())
-mongoose.connect("mongodb://localhost:27017/user")
+//connecting monodb with the url
+mongoose.connect("mongodb://localhost:27017/user");
 
-app.post('/', (req,res) => {
+app.post('/signup', (req,res) => {
     userModel.create(req.body)
-    .then(userdetails => res.json(userdetails))
+    .then(user => res.json(user))
     .catch(err => res.json(err))
 })
 
 app.listen(3001, () => {
-    console.log("server run");
+    console.log("server runing");
 })

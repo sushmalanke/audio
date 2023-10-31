@@ -3,6 +3,7 @@ import style from "./SignUp.module.scss";
 import BrandInfo from "../brand/BrandInfo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import google from "../../assets/icons/google.svg";
 import apple from "../../assets/icons/apple (2).svg";
 import facebook from "../../assets/icons/fbook.svg";
@@ -13,8 +14,12 @@ function SignUp() {
     register,
     formState: { errors },
   } = useForm();
-  const onSubmit = (values) => alert(values.email + " " + values.password);
-
+  const onSubmit = (values) => {
+    alert(values.email + " " + values.password); 
+    axios.post('http://localhost:3000/signup',(values.email , values.password ))
+    .then(result => console.log(result))
+    .catch(err=>console.log(err))
+  }
   return (
     <form
       className={style["signup-container"]}
@@ -49,9 +54,9 @@ function SignUp() {
                 required: "Required",
                 pattern: {
                   value:
-                    /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,10}$/,
+                    /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/,
                   message:
-                    "Password requirements: 8-20 characters, 1 number, 1 letter, 1 symbol.",
+                    "Password requirements: 8-15 characters, 1 number, 1 letter, 1 symbol.",
                 },
               })}
             />
