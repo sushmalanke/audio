@@ -1,0 +1,62 @@
+@import "../../styles/index.scss";
+.logo {
+    width: 150px;
+    img {
+       width: 100%;
+    }
+}
+.signuppage {
+  display: flex;
+  width: fit-content;
+  margin-left:9rem;
+  border-radius: 25px;
+  box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+
+  .register-container {
+    color: $white;
+    padding: 2rem 0.5rem;
+    width: 240px;
+    margin: auto;
+    border-top-left-radius: 55px;
+    background: rgb(3,26,186);
+    background: linear-gradient(180deg, rgba(3,26,186,1) 0%, rgba(19,66,150,0.8744747899159664) 49%);
+    border-bottom-left-radius: 55px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    .registration-data {
+        width: 100%;
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      padding: 1rem 0 1rem 0;
+      text-align: center;
+    }
+    p {
+      font-size: 10px;
+      font-weight: 400;
+      padding-bottom: 1rem;
+      text-align: center;
+      line-height: 2;
+    }
+    .signin-button {
+        text-align: center;
+        button {
+            background-color: transparent;
+            color: $white;
+            border: 1px solid $white;
+            width: 100px;
+            align-items: center;
+            padding: 5px 0 ;
+            border-radius: 10px;
+            font-size: 0.5rem;
+            margin: auto;
+            a {
+              text-decoration: none;
+              color: $white;
+            }
+          }
+    }
+   
+  }
+}
+}

@@ -1,92 +1,63 @@
 @import "../../styles/index.scss";
 
-.signup-container {
-  background-image: url("../../assets/images/heroimage.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 800px;
-  position: relative;
-
-  .backgroundoverlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.6531862745098039) 10%,
-      rgba(30, 154, 106, 0.5551470588235294) 74%
-    );
+.sigup-data {
+  margin: auto;
+  height: fit-content;
+ 
+  padding: 0 1rem;
+  text-align: center;
+  .signup-header {
+    color: $black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2rem;
   }
 
-  .sigup-data {
-    position: absolute;
-    margin: auto;
-    width: 312px;
-    height: fit-content;
-    top: 15%;
-    text-align: center;
+  button {
+    background-color: $primarycolor;
+    color: $white;
+    width: 100px;
+    border: none;
+    padding:5px 20px;
+    border-radius: 5px;
+    font-size: 0.5rem;
+    margin :0;
+  }
 
-    button {
-      background-color: $primarycolor;
-      color: $white;
-      width: 280px;
-      padding: 13px 40px;
+  .applogin {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+    margin: 1rem auto;
+    img {
+      background-color: white;
+      font-size: -4px;
+      width: 30px;
+      height: 35px;
+    }
+  }
+  .input-form {
+    .input {
+      text-align: center;
+    }
+    .email-form {
+      padding: 10px 40px;
+      color: $black;
+      border: none;
+      background-color: $grey;
       border-radius: 10px;
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.7rem;
+      width: 100px;
     }
-    p {
-      color: $white;
-      font-size: 0.8rem;
-      a {
-        color: $primarycolor;
-        text-decoration: underline;
-      }
+    .password-form {
+      padding: 10px 40px;
+      color: $black;
+      border: none;
+      background-color: $grey;
+      border-radius: 10px;
+      margin-bottom: 0.7rem;
+      width: 100px;
     }
-    .applogin {
-      display: flex;
-      justify-content: space-between;
-      width: 40%;
-      align-items: center;
-      margin:1REM auto; 
-      img {
-        background-color: white;
-        font-size: -4px;
-        width: 30px;
-        height: 35px;
-      }
-    }
-    .input-form {
-      .input {
-        text-align: center;
-      }
-      p {
-        color: $red;
-      }
-      .email-form {
-        padding: 15px 40px;
-        color: $black;
-        background-image: url("../../assets/icons/mail.svg");
-        background-repeat: no-repeat;
-        background-position: 10px 10px;
-        border-radius: 10px;
-        margin-bottom: 0.7rem;
-        width: 200px;
-      }
-      .password-form {
-        padding: 15px 40px;
-        color: $black;
-        background-image: url("../../assets/icons/lock.svg");
-        background-repeat: no-repeat;
-        background-position: 10px 10px;
-        border-radius: 10px;
-        margin-bottom: 0.7rem;
-        width: 200px;
-      }
-    }
-   
   }
-  
 }
